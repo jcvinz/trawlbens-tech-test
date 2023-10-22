@@ -1,0 +1,1 @@
+E:\trawlbens-tech-test\buildSrc\build\classes\kotlin\main\Dependencies.class;E:\trawlbens-tech-test\buildSrc\build\classes\kotlin\main\Versions.class

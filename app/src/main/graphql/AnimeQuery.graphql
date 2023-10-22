@@ -1,0 +1,34 @@
+query GetAnimeCardList($page: Int, $perPage: Int, $genre: [String], $season: MediaSeason, $search: String) {
+    Page(page: $page, perPage: $perPage) {
+        pageInfo {
+            hasNextPage
+        }
+        media(sort: FAVOURITES_DESC, type: ANIME, genre_in: $genre, season: $season, search: $search) {
+            id,
+            title {
+                english
+            },
+            coverImage {
+                extraLarge
+            }
+        }
+    }
+}
+
+query GetGenreList {
+    GenreCollection
+}
+
+query GetAnimeDetail($id: Int) {
+    Media(id: $id) {
+        title {
+            english
+        }
+        coverImage {
+            extraLarge
+        }
+        bannerImage
+        description
+        siteUrl
+    }
+}
